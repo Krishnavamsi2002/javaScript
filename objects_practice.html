@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OBJECTS</title>
+    </head>
+    <body>
+        <h1>OBJECTS</h1>
+       <script>
+            const details={
+                f_Name:"Krishna",
+                L_Name:'vamsi',
+                Age:20
+            };
+            console.log(details);
+            console.log(details.Age);
+            details.village="Yerranilligunta";
+            console.log(details);
+//Second way of creating An Objects using new
+            const obj=new Object();
+            obj.f_Name="Vamsi";
+            obj.L_Name="pecchetti";
+            obj.Age=22;
+            console.log(obj);
+
+//Nested Objects
+            const details2={
+                f_Name:"Krishna",
+                L_Name:'vamsi',
+                Age:20,
+                Education:{
+                        School:"Narayana",
+                        DIploma:"Vasavi" 
+                        }
+            };
+            console.log(details2);
+            console.log(details2.Education.DIploma);
+            details2.Education.Btech="Raghu";
+            console.log(details2);
+            console.log(details2.Education.Btech);
+       </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    }
+.title{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+    }
+.emoji{
+        height: 50px;
+    }
+.movie_button{
+        height: 50px;
+        background-color: transparent;
+        border: 3px solid white;
+    width: 100px;
+    height: 100px;
+        border-radius: 50px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+.js_result{
+        font-weight: bold;
+        font-size: 25px;
+        margin-top: 50px;
+    }
+.js_score{
+        margin-top: 60px;
+    }
+.reset_button,.Autoplay_button{
+        background-color: white;
+        border: none;
+        font-size: 16px;
+        padding: 8px 15px;
+        cursor: pointer;
+    }

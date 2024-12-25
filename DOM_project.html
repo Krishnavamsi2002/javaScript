@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            DOM_PROJECT
+        </title>
+    </head>
+    <body>
+        
+        <p>You Tube subscribe Button</p>
+        <button onclick="
+        subscribe();
+        " class="js-subscribe-button">subscribe</button><br><br><br>
+
+
+        <p>Rock Paper scissor</p>
+        <a class="linl_to_game" href="Rock_paper_scissor_for_DOM.html"> Click hire</a><br><br>
+
+
+        <p>Amozon Shipping Calculator</p>
+        <p>Orders under $40= +$10 Shipping.</p>
+        <p>Orders over $40= Free Shipping.</p>
+        <input type="text" placeholder="Cost of order" id="cost"
+        onkeydown="
+        if(event.key==='Enter'){
+            calculateTotal();
+        }
+        ">
+        
+        <button onclick="
+           calculateTotal();
+           ">Calculate</button>
+        <p class="finalprice" id="finalprice"></p>
+
+
+        <script>
+            function calculateTotal()
+            {
+               let cost=parseInt( document.getElementById('cost').value);
+               if(cost<=40)
+                cost+=10;
+
+            document.getElementById('finalprice').innerHTML=`$${cost}`;
+                
+            }
+
+            function subscribe(){
+                const buttonElement =document.querySelector('.js-subscribe-button');
+        
+                if(buttonElement.innerText==='subscribe')
+                    buttonElement.innerHTML='subscribed';
+                else
+                    buttonElement.innerHTML='subscribe';
+            }
+         
+        </script>
+
+    </body>
+</html>

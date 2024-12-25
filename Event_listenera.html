@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Listner</title>
+    </head>
+    <body>
+        <h4>Use to add and remove muntiple event listener</h4>
+        <button class="click_button">click</button>
+        
+    
+    <script>
+        const fun=()=>{
+            console.log("click 1")
+        };
+
+        const element=document.querySelector('.click_button');
+        element.addEventListener('click',fun);
+        
+        
+        element.addEventListener('click',()=>{
+            console.log("click 2");
+        });
+
+       // element.removeEventListener('click',fun);
+
+
+    </script>
+    </body>
+</html>

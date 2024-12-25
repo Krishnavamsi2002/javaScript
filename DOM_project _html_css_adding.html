@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>
+            DOM_PROJECT
+        </title>
+        <style>
+            body{
+                font-family: Arial;
+               
+            }
+            .js-subscribe-button{
+                border-radius: 20px;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+                border: none;
+              font-weight:bold ;
+                padding: 10px 15px 10px 15px;  
+                transition: 0.5s; 
+                margin-bottom: 30px;
+            }
+            .is_subscribed{
+                background-color: rgb(240, 240, 240);
+                color: black;
+                transition: 0.5s;
+            }
+            .cost_input{
+                font-size:15px ;
+                padding: 10px;
+                margin-bottom: 50px;
+            }
+            .calculate_button{
+                padding: 11px  15px;
+                font-size: 15px;
+                border: none;
+                background-color: green ;
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <p>You Tube subscribe Button</p>
+        <button  onclick="subscribe();
+        " class="js-subscribe-button">subscribe</button>
+
+
+
+
+<p>Amozon Shipping Calculator</p>
+<p>Orders under $40= +$10 Shipping.</p>
+<p>Orders over $40= Free Shipping.</p>
+<input type="text" placeholder="Cost of order" class="cost_input" id="cost"
+onkeydown="
+        if(event.key==='Enter'){
+            calculateTotal();
+        }
+        ">
+        
+        <button class="calculate_button" onclick="
+           calculateTotal();
+           ">Calculate</button>
+        <p class="finalprice" id="finalprice"></p>
+        
+        
+        <p>Rock Paper scissor</p>
+        <a class="linl_to_game" href="Rock_paper_scissor_for_DOM _html.html"> Click hire</a><br><br>
+        <script>
+            function calculateTotal()
+            {
+               let cost=parseInt( document.getElementById('cost').value);
+               if(cost<=40)
+                cost+=10;
+
+            document.getElementById('finalprice').innerHTML=`$${cost}`;
+                
+            }
+
+            function subscribe(){
+                const buttonElement =document.querySelector('.js-subscribe-button');
+        
+                if(buttonElement.innerText==='subscribe'){
+                    buttonElement.innerHTML='subscribed';
+                    //Adding the class to subscribed
+                    buttonElement.classList.add('is_subscribed');
+                }    
+                else{
+
+                    buttonElement.innerHTML='subscribe';
+                    buttonElement.classList.remove('is_subscribed');
+                }
+            }
+         
+        </script>
+
+    </body>
+</html>

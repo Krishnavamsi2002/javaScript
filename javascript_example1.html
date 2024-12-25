@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javaScript program example 1</title>
+    </head>
+    <body>
+        <button onclick="
+            console.log('cart quantity:'+quantity)"
+         >add to card</button>
+         
+        <button onclick="
+        console.log('Cart quantity :'+ ++quantity)"
+        >add </button>
+        <button onclick="
+            quantity+=2;
+            console.log('Cart quantity:'+quantity);
+        ">+2</button>
+        <button onclick="
+            quantity+=3;
+            console.log('cart quantity:'+quantity)
+        ">+3</button>
+        <button onclick="
+        quantity=0;
+            console.log('cart quantity:'+quantity);
+        ">Reset</button>
+    </body>
+
+    <script>
+        let quantity=0;
+    </script>
+</html>

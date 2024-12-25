@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.list3,.todo3_input{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 20px;  
+    
+    align-items: center;
+}
+.todo3_input{
+    margin-bottom: 20px;
+    align-items: stretch;
+}
+.todo3{
+    color: white;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    align-items: stretch;
+}
+.text3,.date{
+    border-color: rgb(171, 170, 170);
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 6px;
+    cursor: pointer;
+}
+.delete_button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+}

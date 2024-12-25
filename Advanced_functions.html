@@ -1,0 +1,120 @@
+
+<html>
+    <head>
+        <title>Advanced functions</title>
+    </head>
+    <body>
+        <h2>Advanced functions</h2>
+    </body>
+    <script>
+      /*
+      //normal functions
+       function greek()
+        {
+            console.log("Hello World1");
+        }
+        //Anonomious functions
+        const greek1=function(){
+            console.log('hello world2');
+        }
+        greek();
+        greek1();
+
+        //function in an objects
+        const object={
+            num:100,
+            fun: function(){
+                console.log("hello world3");
+            }
+        }
+        object.fun();
+
+        //passing function as an perameter
+        function greek4(parameter)
+        {
+            parameter();
+        }
+        greek4(function(){
+            console.log("hello5");//call back function
+        });
+    */
+
+   //setTimeout(function,time) inbuild function**************8 
+  /* setTimeout(function(){
+    console.log("run After 5 sec(Time out Function)");
+   },5000);/
+
+   console.log("next line after settime out");
+
+   //setInterval(function,time)
+   setInterval(function(){
+    console.log("run After every 5 sec contindsduly(set interval Function)");
+   },5000);
+   console.log("next line after setInterval");*/
+
+// ****************************(For Each LOOp)**************
+ /*['A','B','C','D','E'].forEach(function(value){
+    console.log(value);
+ });
+
+ ['A','B','C','D','E'].forEach(function(value,index){
+    console.log(index);
+    console.log(value);
+ });
+
+ ['A','B','C','D','E'].forEach(function(value,index){
+    if(value==='B')
+    return;
+   
+    console.log(value);
+ });*/
+  
+ //******************************(Arrow Functions)*******************************
+
+ /*const arrow1=()=>{
+    console.log('arrow1');
+ };
+ arrow1();
+
+ const arrow2=(parameter)=>{
+    console.log(parameter);
+ };
+
+ const arrow3=parameter=>{
+    console.log(parameter);
+ };
+ arrow2('arrow2');
+ arrow3('arrow3');
+
+ const function4=(parameter)=>parameter+40;
+  console.log( function4(40));
+  */
+
+  //*****************************************(Filter(),map())****************
+
+  //Filter-->create  the new  array based on boolean(true)
+  console.log([1,2,3,-5,-6,-9,7,8].filter((value,index)=>{
+    if(value>0){
+        return true;   //[1,2,3,7,8]
+    }
+  }));
+  
+
+
+  //Map-->create  the new  array based on function(Statements)
+  console.log([1,2,3,-5,-6,-9,7,8].map((value,index)=>{
+    return value*2; //[2,4,6,-10,-12,-18,-16]
+
+  }));
+//shortcut
+  console.log([1,2,3,-5,-6,-9,7,8].map(value=>value*2));
+     //[2,4,6,-10,-12,-18,-16]
+
+     
+  const ele=[1,2,3,-5,-6,-9,7,8].map((value)=>value*2);
+  console.log("hello="+ele);
+
+
+
+    </script>
+</html>

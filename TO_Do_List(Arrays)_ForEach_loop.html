@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="TO_Do_List(Arrays)_add_css.css">
+        <title>
+            Arrays...
+        </title>
+    </head>
+    <body>
+        <P>Todo List Practice 1</P>
+        <input type="text" id="text1" placeholder="Todo Name" class="text1">
+        <button onclick="todo1()">Add</button>
+        <p class="result" id="result"></p><br><br><br>
+
+        
+        <P>Todo List Practice 2</P>
+        <input type="text" id="text2" placeholder="Todo Name2" class="text2">
+        <button class="todo2" onclick="todo2();">Add</button>
+            
+        <div class="list2">
+
+        </div>
+
+
+        <P>Todo List Practice 3</P>
+        <div class="todo3_input">
+            <input type="text" id="text3" placeholder="Enter  Name" class="text3">
+            <input type="date" id="date3" class="date">
+            <button class="todo3" onclick="todo3()">Add</button>
+        </div>
+        
+            
+        <div class="list3" id="list3">
+
+        </div>
+        
+    </body>
+    <script>
+        //*************************Todo1********************
+        let array1=[];
+        function todo1()
+        {
+            let value1=document.getElementById('text1');
+            array1.push(value1.value);
+            document.getElementById('result').innerHTML=`${array1}`;
+            value1.value=" ";
+        } 
+        //*************************Todo2*******************
+        
+        let array2=[];
+        function todo2()
+        {
+            let value1=document.getElementById('text2');
+            array2.push(value1.value);
+            
+            value1.value=" ";
+            repeate();
+        }  
+        
+        function repeate()
+         {
+             let todohtml='';
+             for (let i = 0; i < array2.length; i++) {
+                 const element = array2[i];
+                 const html=`<p>${element}</p>`;//genarating html
+                 todohtml+=html;
+             }
+            document.querySelector(".list2").innerHTML=todohtml;
+           
+         }
+        //**********************************todo3(array as objects)********************
+        const array3=[
+            {name:'krishna Vamsi',date:'15-05-2002'},
+            {
+            name:'lilly',
+            date:'12-10-2003'
+        }];
+
+
+        function todo3()
+        {
+            const name=document.getElementById('text3').value;
+            const date=document.getElementById('date3').value;
+            array3.push({
+                //name:name,
+                //date:date
+                name,
+                date
+            });
+           // name=" ";
+           // date='';
+            document.getElementById('text3').value='';
+            document.getElementById('date3').value='';
+
+            repeate2();   
+        }
+
+        function repeate2()
+        {
+            let todohtml1='';
+           // array3.forEach(function(object,index){
+                array3.forEach((object,index)=>{
+                    // const obj=array3[i];
+
+                    //let name=object.name;
+                    //let {name}=object;
+                    //let date=object.date;
+                    //let {date}=object;
+                    const {name,date}=object;
+                    let html1=`
+                    <div>${name}</div>
+                    <div>${date}</div>
+                    <button class="delete_button" onclick="
+                            array3.splice(${index},1);
+                            repeate2();
+                    ">Delete</button>
+                    `;
+                    todohtml1+=html1;
+
+            });
+           /* for (let i = 0; i < array3.length; i++) {
+                    const object = array3[i];
+                    //let name=object.name;
+                    //let {name}=object;
+                    //let date=object.date;
+                    //let {date}=object;
+                    const {name,date}=object;
+                    let html1=`
+                    <div>${name}</div>
+                    <div>${date}</div>
+                    <button class="delete_button" onclick="
+                            array3.splice(${i},1);
+                            repeate2();
+                    ">Delete</button>
+                    `;
+                    todohtml1+=html1;
+
+            }*/
+            document.getElementById('list3').innerHTML=todohtml1;
+        }
+        repeate2();
+        //**********************Copy array***************
+        let arra1=[1,2,3,4,5,6];
+        let arra2=arra1;//wrong
+        console.log(arra1);
+        console.log(arra2);
+        arra2.push(10);
+        console.log(arra1);
+        console.log(arra2);
+        arra2=arra1.slice();
+        arra2.push(11
+            
+        );//it will not effect the array1
+        console.log(arra1);
+        console.log(arra2);
+
+
+
+        </script>
+</html>
